@@ -104,7 +104,7 @@ function! s:ValidBefore(opener, closer, wildcard) abort
         return 0
     elseif !pear_tree#IsDumbPair(a:opener)
         return 1
-    elseif l:text_before_cursor[-l:len:] ==# a:opener
+    elseif l:text_before_cursor[(-l:len):] ==# a:opener
         return 0
     elseif pear_tree#IsCloser(l:text_before_opener[-1:])
         return 0
